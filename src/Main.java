@@ -7,8 +7,16 @@ public class Main {
         boolean flag = true;
         Scanner scanner = new Scanner(System.in);
 
-        // API key y servicio
-        String apiKey = "2e1b97df98bc076ecd9a24d6";
+        // API key desde variable de entorno (nunca hardcodeada)
+        String apiKey = System.getenv("EXCHANGE_API_KEY");
+        if (apiKey == null || apiKey.isBlank()) {
+            System.err.println("Error: no se encontró la variable de entorno EXCHANGE_API_KEY.");
+            System.err.println("Defínela antes de ejecutar el programa:");
+            System.err.println("  export EXCHANGE_API_KEY=\"tu_api_key\"  (Mac/Linux)");
+            System.err.println("  set EXCHANGE_API_KEY=tu_api_key        (Windows cmd)");
+            return;
+        }
+
         ApiService apiService = new ApiService(apiKey);
 
         // Traemos solo las monedas que nos interesan
