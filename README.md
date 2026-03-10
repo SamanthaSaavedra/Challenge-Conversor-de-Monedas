@@ -123,17 +123,6 @@ Ingrese la cantidad en USD: 100
 
 100.0 USD -> 1720.5 MXN
 ```
-
----
-
-## 🧩 Posibles mejoras futuras
-
-- [ ] Agregar soporte para más monedas
-- [ ] Manejo de errores más amigable para entradas inválidas
-- [ ] Exportar historial de conversiones a un archivo `.txt`
-- [ ] Interfaz gráfica con JavaFX o Swing
-- [ ] Mover la API key a variables de entorno
-
 ---
 
 ## 👤 Autor
